@@ -47,3 +47,13 @@ function remove(name){
 
   dataToView();
 }
+
+function add(){
+  var newProduct =
+  {name:$("#productName").val(),
+  img:$("#productImgUrl").val(),
+  desc:$("#productDesc").val()};
+  disks.push(newProduct);
+
+  dataToView();
+}
