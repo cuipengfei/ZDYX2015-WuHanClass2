@@ -1,8 +1,4 @@
 $(document).ready(function() {
-  $("#search").keyup(function() {
-    search();
-  });
-
   dataToView(disks);
 });
 
