@@ -1,7 +1,9 @@
 $(document).ready(function() {
-  var container = $("#disksContainer");
-  console.log(container);
-  console.log(diskDiv(disks[0]))
+  _.chain(disks).map(function(disk) {
+    return diskDiv(disk);
+  }).each(function(div) {
+    $("#disksContainer").append(div);
+  });
 });
 
 function diskDiv(disk) {
