@@ -1,10 +1,15 @@
 $(document).ready(function() {
+  dataToView(disks);
+});
+
+function dataToView(disks){
+  $("#disksContainer").empty();
   _.chain(disks).map(function(disk) {
     return diskDiv(disk);
   }).each(function(div) {
     $("#disksContainer").append(div);
   });
-});
+}
 
 function diskDiv(disk) {
   return $("<div>")
@@ -32,6 +37,8 @@ function add() {
     img: $("#productImgUrl").val(),
     desc: $("#productDesc").val()
   };
-  console.log("you just clicked a button :)");
-  console.log("the new product is: " + newProduct.name);
+
+  disks.push(newProduct);
+
+  dataToView(disks);
 }
