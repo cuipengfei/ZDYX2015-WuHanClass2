@@ -51,5 +51,5 @@ function search() {
       disk.desc.indexOf(keyWord) !== -1;
   });
 
-  console.log(searchedDisks);
+  dataToView(searchedDisks);
 }
