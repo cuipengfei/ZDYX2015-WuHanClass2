@@ -2,7 +2,7 @@ $(document).ready(function() {
   dataToView(disks);
 });
 
-function dataToView(disks){
+function dataToView(disks) {
   $("#disksContainer").empty();
   _.chain(disks).map(function(disk) {
     return diskDiv(disk);
@@ -41,4 +41,8 @@ function add() {
   disks.push(newProduct);
 
   dataToView(disks);
+}
+
+function search() {
+  console.log("search input" + new Date());
 }
