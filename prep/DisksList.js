@@ -44,5 +44,12 @@ function add() {
 }
 
 function search() {
-  console.log("search input" + new Date());
+  var keyWord = $("#search").val();
+
+  var searchedDisks = _.chain(disks).filter(function(disk) {
+    return disk.name.indexOf(keyWord) !== -1 ||
+      disk.desc.indexOf(keyWord) !== -1;
+  });
+
+  console.log(searchedDisks);
 }
