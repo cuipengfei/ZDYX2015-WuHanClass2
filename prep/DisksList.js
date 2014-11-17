@@ -25,3 +25,7 @@ function diskImg(url) {
 function diskDesc(desc) {
   return $("<p>").html(desc);
 }
+
+function add() {
+  console.log("you just clicked a button :)");
+}
