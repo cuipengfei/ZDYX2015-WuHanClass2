@@ -27,5 +27,11 @@ function diskDesc(desc) {
 }
 
 function add() {
+  var newProduct = {
+    name: $("#productName").val(),
+    img: $("#productImgUrl").val(),
+    desc: $("#productDesc").val()
+  };
   console.log("you just clicked a button :)");
+  console.log("the new product is: " + newProduct.name);
 }
