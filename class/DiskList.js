@@ -43,3 +43,7 @@ function add() {
 
   dataToView(disks);
 }
+
+function search() {
+  console.log("keyup");
+}
