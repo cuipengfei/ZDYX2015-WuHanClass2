@@ -45,5 +45,9 @@ function add() {
 }
 
 function search() {
-  console.log("keyup");
+  var keyWord = $("#search").val();
+  var searchResult = _.filter(disks, function(disk) {
+    return disk.name.indexOf(keyWord) != -1;
+  });
+  console.log(searchResult[0]);
 }
