@@ -49,5 +49,5 @@ function search() {
   var searchResult = _.filter(disks, function(disk) {
     return disk.name.indexOf(keyWord) != -1;
   });
-  console.log(searchResult[0]);
+  dataToView(searchResult);
 }
